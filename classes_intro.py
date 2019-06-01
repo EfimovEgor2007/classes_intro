@@ -6,8 +6,7 @@ class Inanimate(Things):
     pass
 
 class Animate(Things):
-    def exist(self):
-      print('Cogito ergo sum')
+    pass
 
 class Sidewalks(Inanimate):
     pass
@@ -25,14 +24,46 @@ class Mammals(Animals):
         print('feeds the baby with milk')
 
 class Giraffes(Mammals):
-    # usually in life complex functions and actions consist of simpler, iherited functions
-    # example - how to use function eat() in eat_leaves_from_trees()
+    
+    # initializing Giraffe with number of spots on it
+    def __init__(self,spots):
+        self.giraffe_spots = spots
+        
     def eat_leaves_from_trees(self):
         self.eat()
         print('right from the trees')
-    def eat_rainbow_from_the_sky(self):
-        # TODO - eat() it, for Skittles sake!
     def find_food(self):
-      # TODO - move() your ass, find some food, eat() it!
+        self.move()
+        print("I've found food!")
+        self.eat()
     def dance_jig(self):
-      # TODO - move(), move(), move(), move() your body!
+        self.move()
+        self.move()
+        self.move()
+        self.move()
+    def get_painted(self):
+        self.giraffe_spots += 100
+
+# --- TODO - would this code work now?
+reginald = Giraffes()
+reginald.move()
+reginald.eat_leaves_from_trees()
+harold = Giraffes()
+harold.move()
+# ---
+
+# not all the Giraffes are created equal
+oswald = Giraffes(100)
+gertrude = Giraffes(150)
+print(oswald.giraffe_spots)
+print(gertrude.giraffe_spots)
+
+# you've been (heavily) spotted!
+oswald.giraffe_spots += 200
+
+# evolve
+gertrude.get_painted()
+
+# who's the boss now?!
+print('Oswald',oswald.giraffe_spots)
+print('Gertrude',gertrude.giraffe_spots)
