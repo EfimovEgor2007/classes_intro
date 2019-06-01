@@ -1,26 +1,27 @@
-#using general and class functions
-def some_random_function():
-    print('I am a normal function')
-
-#IMPORTANT! -  all functions take 'self' as an argument
-class SomeRandomClass:
-    #---------------------!!!here!!!-------------------
-    def first_class_function(self):
-        print('I am a class function')
-    #---------------------!!!here!!!-------------------
-    def second_class_function(self):
-        return 'I am also a class function'
+#creating a class
+class Things:
     pass
 
-#general func
-some_random_function()
-a = SomeRandomClass()
-#class functions
-first_func = a.first_class_function
-second_func = a.second_class_function
-print('new funcs')
-first_func()
-print(second_func())
-print('directly class funcs')
-a.first_class_function()
-print(a.second_class_function())
+#creating a derived class (from base class)
+class Inanimate(Things):
+    pass
+
+class Animate(Things):
+    # example of a class function
+    def exist(self):
+        print('Cogito ergo sum')
+
+class Sidewalks(Inanimate):
+    pass
+
+class Animals(Animate):
+    # TODO - create three functions for this class: move(), eat(), breathe()
+    pass
+
+class Mammals(Animals):
+    # TODO - create one function for this class: feed_baby_with_milk()
+    pass
+
+class Giraffes(Mammals):
+    # TODO - create one function for this class: eat_leaves_from_trees()
+    pass
