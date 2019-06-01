@@ -1,24 +1,26 @@
-#creating a class
-class Things:
-    pass
-#creating a derived class (from base class)
-class Inanimate(Things):
+#using general and class functions
+def some_random_function():
+    print('I am a normal function')
+
+#IMPORTANT! -  all functions take 'self' as an argument
+class SomeRandomClass:
+    #---------------------!!!here!!!-------------------
+    def first_class_function(self):
+        print('I am a class function')
+    #---------------------!!!here!!!-------------------
+    def second_class_function(self):
+        return 'I am also a class function'
     pass
 
-class Animate(Things):
-    pass
-
-class Sidewalks(Inanimate):
-    pass
-
-class Animals(Animate):
-    pass
-
-class Mammals(Animals):
-    pass
-
-class Giraffes(Mammals):
-    pass
-
-#creating an object of a given class
-reginald = Giraffes()
+#general func
+some_random_function()
+a = SomeRandomClass()
+#class functions
+first_func = a.first_class_function
+second_func = a.second_class_function
+print('new funcs')
+first_func()
+print(second_func())
+print('directly class funcs')
+a.first_class_function()
+print(a.second_class_function())
