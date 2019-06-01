@@ -43,27 +43,15 @@ class Giraffes(Mammals):
         self.move()
     def get_painted(self):
         self.giraffe_spots += 100
+        
+# TODO:
+# 1 - create class Dogs
+# 2 - initialize a Dog with its name, breed and age
+# 3 - add some abilities for the Dogs (create some functions)
 
-# --- TODO - would this code work now?
-reginald = Giraffes()
-reginald.move()
-reginald.eat_leaves_from_trees()
-harold = Giraffes()
-harold.move()
-# ---
+class Dogs(#...
+    
+# make a small zoo with Dogs and Giraffes
+# pretend that the life goes on
 
-# not all the Giraffes are created equal
-oswald = Giraffes(100)
-gertrude = Giraffes(150)
-print(oswald.giraffe_spots)
-print(gertrude.giraffe_spots)
 
-# you've been (heavily) spotted!
-oswald.giraffe_spots += 200
-
-# evolve
-gertrude.get_painted()
-
-# who's the boss now?!
-print('Oswald',oswald.giraffe_spots)
-print('Gertrude',gertrude.giraffe_spots)
